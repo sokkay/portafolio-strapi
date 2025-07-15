@@ -52,6 +52,20 @@
       "relation": "manyToMany",
       "target": "api::technology.technology",
       "inversedBy": "projects"
+    },
+    "logo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "images": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true
     }
   }
 }

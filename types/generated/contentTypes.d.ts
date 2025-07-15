@@ -471,11 +471,13 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
         };
       }>;
     featured: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    images: Schema.Attribute.Media<'images', true>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::project.project'
     >;
+    logo: Schema.Attribute.Media<'images'>;
     name: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
