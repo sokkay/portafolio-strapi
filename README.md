@@ -35,3 +35,17 @@ When developing locally this Strapi template will connect to the Postgres server
 
 - After your app is deployed, visit the `/admin` endpoint to create your admin user.
 - If you want to use npm with this project make sure you delete the `yarn.lock` file after you have ran `npm install`
+
+## Developing Locally:
+
+When developing locally this Strapi template will connect to the Postgres server from its public TCP Proxy:
+
+- Within the service settings of the Strapi service click the `Eject` button on the upstream repository
+- Clone that newly created repository locally
+- Install Strapi's dependencies with `yarn install` or `npm install`
+- Install the Railway CLI with instructions found here
+- If this is your first time using the CLI make sure to login with `railway login`
+- Within the local repository run `railway link` to link the local repository to the Strapi service on Railway
+- Start Strapi for development with `railway run yarn run develop` or `railway run npm run develop`
+- This command will run Strapi in development mode with the service variables available locally
+- Open your browser to http://127.0.0.1:1337/admin
